@@ -1,0 +1,101 @@
+======================================================================
+  SMART HUNT — Module 4.2: Analytics Report
+======================================================================
+
+
+  DATASET OVERVIEW
+  ----------------------------------------
+  Total products     : 1351
+  Total columns      : 24
+  Categories         : 9
+  Price range        : Rs. 39 — Rs. 77990
+  Average price      : Rs. 3304.80
+
+
+  RATING STATISTICS
+  ----------------------------------------
+  Average rating     : 4.09
+  Median rating      : 4.10
+  Min rating         : 2.00
+  Max rating         : 5.00
+  Products rated 4+  : 1010 (74.8%)
+
+
+  DEMAND STATISTICS (rating_count as proxy)
+  ----------------------------------------
+  Average rating count : 17644
+  Median rating count  : 4740
+  Max rating count     : 426973
+
+
+  DISCOUNT STATISTICS
+  ----------------------------------------
+  Average discount   : 46.7%
+  Median discount    : 49.0%
+  Max discount       : 94%
+
+
+  PROFIT MARGIN STATISTICS
+  ----------------------------------------
+  Average margin     : -7.28%
+  Median margin      : 0.72%
+  Min margin         : -379.56%
+  Max margin         : 53.60%
+
+
+  AVERAGE RATING PER CATEGORY
+  ----------------------------------------
+  OfficeProducts                 : 4.31
+  Toys&Games                     : 4.30
+  HomeImprovement                : 4.25
+  Computers&Accessories          : 4.15
+  Electronics                    : 4.08
+  Home&Kitchen                   : 4.04
+  Health&PersonalCare            : 4.00
+  MusicalInstruments             : 3.90
+  Car&Motorbike                  : 3.80
+
+
+  PRODUCT COUNT PER CATEGORY (Competition)
+  ----------------------------------------
+  Electronics                    : 490
+  Home&Kitchen                   : 448
+  Computers&Accessories          : 375
+  OfficeProducts                 : 31
+  MusicalInstruments             : 2
+  HomeImprovement                : 2
+  Toys&Games                     : 1
+  Car&Motorbike                  : 1
+  Health&PersonalCare            : 1
+
+
+  AVERAGE PROFIT MARGIN PER CATEGORY
+  ----------------------------------------
+  Toys&Games                     : 12.80%
+  Car&Motorbike                  : 8.38%
+  Home&Kitchen                   : 4.96%
+  Health&PersonalCare            : 2.49%
+  MusicalInstruments             : -3.27%
+  Electronics                    : -3.40%
+  HomeImprovement                : -14.96%
+  Computers&Accessories          : -24.76%
+  OfficeProducts                 : -35.55%
+
+
+  CHARTS GENERATED
+  ----------------------------------------
+  01_price_distribution.png       — Histogram of discounted prices
+  02_rating_distribution.png      — Histogram of product ratings
+  03_avg_rating_per_category.png  — Bar chart: avg rating by category
+  04_products_per_category.png    — Bar chart: competition per category
+  05_discount_vs_demand.png       — Scatter: discount % vs rating count
+  06_profit_margin_per_category.png — Bar chart: avg margin by category
+  07_top10_units_sold.png         — Top 10 products by demand
+  08_correlation_heatmap.png      — Heatmap of numeric correlations
+  09_rating_boxplot_by_category.png — Boxplot: rating spread by category
+  10_profit_margin_distribution.png — Histogram of profit margins
+
+
+======================================================================
+  END OF ANALYTICS REPORT
+======================================================================

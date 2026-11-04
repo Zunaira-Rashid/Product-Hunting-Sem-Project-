@@ -1,0 +1,134 @@
+======================================================================
+  SMART HUNT — Simulation Report
+  Module 4.1 — Simulated Feature Engineering
+======================================================================
+
+  DISCLAIMER
+  ----------------------------------------
+  The following 5 columns are SIMULATED.
+  They are NOT from the original Amazon dataset.
+  They are based on industry norms and Pakistan market estimates.
+  As stated in the project proposal (page 3), simulated values
+  are used where real data is unavailable in public datasets.
+
+
+  INPUT FILE
+  ----------------------------------------
+  C:\Users\AJ\OneDrive\Desktop\product hunting\data\processed\cleaned_products.csv
+  Rows: 1351   Columns before simulation: 17
+
+
+  OUTPUT FILE
+  ----------------------------------------
+  C:\Users\AJ\OneDrive\Desktop\product hunting\data\processed\featured_products.csv
+  Rows: 1351   Columns after simulation: 23
+
+
+  SIMULATED COLUMNS — RULES AND JUSTIFICATION
+  ----------------------------------------
+
+  Column      : supplier_cost
+  Rule        : 30% to 50% of actual_price
+  Justification: Wholesale margin in e-commerce. Suppliers typically sell at 30-50% of MRP.
+  Statistics  :
+    count    = 1351.0000
+    mean     = 2059.8813
+    std      = 4479.6636
+    min      = 13.6000
+    25%      = 246.7450
+    50%      = 593.2800
+    75%      = 1461.3100
+    max      = 62392.0000
+
+  Column      : shipping_cost
+  Rule        : Rs. 50 to Rs. 200 (flat per order)
+  Justification: Average courier delivery cost in Pakistan/India for small-to-medium parcels.
+  Statistics  :
+    count    = 1351.0000
+    mean     = 124.9453
+    std      = 43.0104
+    min      = 50.0200
+    25%      = 88.7550
+    50%      = 125.7800
+    75%      = 161.0300
+    max      = 199.9100
+
+  Column      : ad_cost
+  Rule        : 10% to 15% of discounted_price
+  Justification: Standard digital advertising budget for e-commerce product promotion.
+  Statistics  :
+    count    = 1351.0000
+    mean     = 412.0827
+    std      = 909.2370
+    min      = 4.2400
+    25%      = 43.0550
+    50%      = 107.9300
+    75%      = 276.1700
+    max      = 10517.7700
+
+  Column      : cod_return_rate
+  Rule        : 0.15 to 0.30 (15% to 30%)
+  Justification: Pakistan COD market return rate. No public dataset contains this — simulated.
+  Statistics  :
+    count    = 1351.0000
+    mean     = 0.2242
+    std      = 0.0431
+    min      = 0.1500
+    25%      = 0.1873
+    50%      = 0.2232
+    75%      = 0.2610
+    max      = 0.2998
+
+  Column      : units_sold
+  Rule        : rating_count × 3 to 7
+  Justification: Approx. 1 in 5 buyers leaves a review. Multiplier 3-7 gives conservative estimate.
+  Statistics  :
+    count    = 1351.0000
+    mean     = 88860.6380
+    std      = 215096.6973
+    min      = 0.0000
+    25%      = 5147.0000
+    50%      = 23210.0000
+    75%      = 80114.5000
+    max      = 2469092.0000
+
+
+  VALIDATION RESULTS
+  ----------------------------------------
+  supplier_cost >= actual_price : 0 rows
+  shipping_cost out of range    : 0 rows
+  cod_return_rate out of range  : 0 rows
+  units_sold negative           : 0 rows
+  All checks passed.
+
+
+  COLUMNS IN FINAL DATASET
+  ----------------------------------------
+   1. product_id
+   2. product_name
+   3. category
+   4. discounted_price
+   5. actual_price
+   6. discount_percentage
+   7. rating
+   8. rating_count
+   9. about_product
+  10. user_id
+  11. user_name
+  12. review_id
+  13. review_title
+  14. review_content
+  15. img_link
+  16. product_link
+  17. main_category
+  18. supplier_cost ← SIMULATED
+  19. shipping_cost ← SIMULATED
+  20. ad_cost ← SIMULATED
+  21. cod_return_rate ← SIMULATED
+  22. units_sold ← SIMULATED
+  23. data_source
+
+
+======================================================================
+  END OF SIMULATION REPORT
+======================================================================

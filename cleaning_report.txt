@@ -1,0 +1,153 @@
+======================================================================
+  SMART HUNT — Module 4.1: Data Cleaning Report
+======================================================================
+
+======================================================================
+  1. ORIGINAL DATASET SHAPE
+======================================================================
+  Rows    : 1465
+  Columns : 16
+
+======================================================================
+  2. MISSING VALUES — BEFORE CLEANING
+======================================================================
+product_id             0
+product_name           0
+category               0
+discounted_price       0
+actual_price           0
+discount_percentage    0
+rating                 0
+rating_count           2
+about_product          0
+user_id                0
+user_name              0
+review_id              0
+review_title           0
+review_content         0
+img_link               0
+product_link           0
+
+======================================================================
+  3. MISSING VALUES — AFTER CLEANING
+======================================================================
+product_id             0
+product_name           0
+category               0
+discounted_price       0
+actual_price           0
+discount_percentage    0
+rating                 1
+rating_count           2
+about_product          0
+user_id                0
+user_name              0
+review_id              0
+review_title           0
+review_content         0
+img_link               0
+product_link           0
+main_category          0
+
+  NOTE: 'rating' and 'rating_count' may still contain NaN.
+        These are legitimately unknown — not replaced with 0.
+
+======================================================================
+  4. DUPLICATE ROWS IDENTIFIED
+======================================================================
+  Completely duplicated rows (before cleaning) : 0
+  Rows sharing a duplicate product_id          : 206
+
+  Decision: Kept first occurrence per product_id.
+  Reason  : Each product_id represents a unique product.
+            Duplicate rows arise from multi-reviewer aggregation
+            in the source data, not from true product duplicates.
+
+======================================================================
+  5. DATA TYPES — BEFORE CLEANING
+======================================================================
+product_id             str
+product_name           str
+category               str
+discounted_price       str
+actual_price           str
+discount_percentage    str
+rating                 str
+rating_count           str
+about_product          str
+user_id                str
+user_name              str
+review_id              str
+review_title           str
+review_content         str
+img_link               str
+product_link           str
+
+======================================================================
+  6. DATA TYPES — AFTER CLEANING
+======================================================================
+product_id                 str
+product_name               str
+category                   str
+discounted_price       float64
+actual_price           float64
+discount_percentage      int64
+rating                 float64
+rating_count             Int64
+about_product              str
+user_id                    str
+user_name                  str
+review_id                  str
+review_title               str
+review_content             str
+img_link                   str
+product_link               str
+main_category           object
+
+======================================================================
+  7. CLEANING OPERATIONS PERFORMED
+======================================================================
+   1. Stripped leading/trailing whitespace from all text columns.
+   2. Converted 'discounted_price': removed ₹/commas → float64.
+   3. Converted 'actual_price': removed ₹/commas → float64.
+   4. Converted 'discount_percentage': removed % → float64.
+   5. Converted 'rating' → float64 (non-numeric values → NaN).
+   6. Converted 'rating_count': removed commas → Int64 (nullable integer).
+   7. Flagged 0 row(s) with zero/negative prices → set to NaN. Flagged 0 row(s) with rating outside [1,5] → set to NaN.
+   8. Dropped 0 row(s) missing essential fields (product_id, product_name, or discounted_price).
+   9. Filled 0 missing 'actual_price' value(s) with 'discounted_price' as best proxy.
+  10. Recalculated 0 missing 'discount_percentage' value(s) from actual_price and discounted_price.
+  11. Filled missing text/URL columns with empty string: ['about_product', 'user_id', 'user_name', 'review_id', 'review_title', 'review_content', 'img_link', 'product_link'].
+  12. Removed 0 fully duplicated row(s).
+  13. Found 206 row(s) sharing duplicate product_ids. Kept first occurrence per product_id; dropped 114 duplicate(s).
+  14. Extracted 'main_category' as a new column (first segment of pipe-separated category path).
+  15. Reset DataFrame index after all row drops.
+
+======================================================================
+  8. ROWS RETAINED AND REMOVED
+======================================================================
+  Original rows                              : 1465
+  Rows dropped (missing essential fields)    : 0
+  Rows dropped (fully duplicated)            : 0
+  Rows dropped (duplicate product_id)        : 114
+  -----------------------------------------------
+  Total rows removed                         : 114
+  Final rows retained                        : 1351
+  Final columns                              : 17
+
+======================================================================
+  9. REMAINING DATA QUALITY ISSUES
+======================================================================
+  • 'rating' still has 1 NaN value(s). No imputation applied — unknown ratings should stay unknown.
+  • 'rating_count' still has 2 NaN value(s). Represents products with no recorded review count.
+
+  COLUMNS NOT CLEANED (out of scope for Module 4.1):
+  • about_product  — free text; no normalisation applied.
+  • review_content — free text; no normalisation applied.
+  • img_link / product_link — URLs; validity not checked.
+  • user_id / user_name / review_id — not needed for
+    market intelligence; preserved as-is.
+
+======================================================================
+  END OF REPORT
+======================================================================

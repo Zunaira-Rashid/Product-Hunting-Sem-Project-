@@ -1,0 +1,88 @@
+======================================================================
+  SMART HUNT — Module 4.2: Winning Product Score Report
+======================================================================
+
+
+  SCORING FORMULA
+  ----------------------------------------
+  winning_score = (margin_score  × 0.35)
+                + (demand_score  × 0.30)
+                + (comp_score    × 0.20)
+                + (rating_score  × 0.15)
+  Final score scaled to 0–100.
+
+
+  WEIGHT JUSTIFICATION
+  ----------------------------------------
+  Margin      35% — profit is the primary goal for any dropshipper
+  Demand      30% — no demand = no revenue
+  Competition 20% — less competition = easier market entry
+  Rating      15% — customer trust, affects conversion rate
+
+
+  SCORE STATISTICS
+  ----------------------------------------
+  Total products scored : 1351
+  Average score         : 45.84
+  Median score          : 45.77
+  Highest score         : 71.22
+  Lowest score          : 16.21
+
+
+  TOP 20 WINNING PRODUCTS
+  ----------------------------------------
+  Rank   1 | Score: 71.22 | Margin: -21.6% | boAt BassHeads 100 in-Ear Wired Headphones with Mic (Bl
+  Rank   2 | Score: 69.06 | Margin:  45.5% | Redmi 9 Activ (Carbon Black, 4GB RAM, 64GB Storage) | O
+  Rank   3 | Score: 66.72 | Margin:  -7.0% | Boya ByM1 Auxiliary Omnidirectional Lavalier Condenser 
+  Rank   4 | Score: 66.14 | Margin:  -9.3% | Amazon Basics High-Speed HDMI Cable, 6 Feet (2-Pack),Bl
+  Rank   5 | Score: 65.89 | Margin:  31.5% | Casio FX-991ES Plus-2nd Edition Scientific Calculator, 
+  Rank   6 | Score: 65.83 | Margin:  12.8% | Faber-Castell Connector Pen Set - Pack of 25 (Assorted)
+  Rank   7 | Score: 65.80 | Margin:  36.5% | Casio MJ-120D 150 Steps Check and Correct Desktop Calcu
+  Rank   8 | Score: 65.29 | Margin:  39.0% | Parker Moments Vector Timecheck Gold Trim Roller Ball P
+  Rank   9 | Score: 65.19 | Margin:  47.5% | Redmi 9A Sport (Carbon Black, 2GB RAM, 32GB Storage) | 
+  Rank  10 | Score: 65.00 | Margin: -29.4% | boAt Bassheads 100 in Ear Wired Earphones with Mic(Taff
+  Rank  11 | Score: 64.92 | Margin: -25.7% | SanDisk Cruzer Blade 32GB USB Flash Drive
+  Rank  12 | Score: 64.64 | Margin:  12.0% | Casio FX-82MS 2nd Gen Non-Programmable Scientific Calcu
+  Rank  13 | Score: 64.02 | Margin:   7.1% | Casio MJ-12D 150 Steps Check and Correct Desktop Calcul
+  Rank  14 | Score: 63.68 | Margin:  10.1% | Classmate Long Notebook - 140 Pages, Single Line, 297mm
+  Rank  15 | Score: 63.62 | Margin:  12.5% | Parker Classic Gold Gold Trim Ball Pen
+  Rank  16 | Score: 63.43 | Margin:   0.9% | Classmate Soft Cover 6 Subject Spiral Binding Notebook,
+  Rank  17 | Score: 63.19 | Margin:   8.1% | Parker Vector Camouflage Gift Set - Roller Ball Pen & P
+  Rank  18 | Score: 63.18 | Margin:  12.3% | Classmate Octane Neon- 25 Blue Gel Pens | Smooth Writin
+  Rank  19 | Score: 63.16 | Margin:   2.5% | Dr Trust Electronic Kitchen Digital Scale Weighing Mach
+  Rank  20 | Score: 63.08 | Margin:   0.4% | MAONO AU-400 Lavalier Auxiliary Omnidirectional Microph
+
+
+  AVERAGE WINNING SCORE PER CATEGORY
+  ----------------------------------------
+  Toys&Games                     : 65.83
+  MusicalInstruments             : 64.90
+  Health&PersonalCare            : 63.16
+  Car&Motorbike                  : 62.81
+  HomeImprovement                : 62.44
+  OfficeProducts                 : 59.79
+  Computers&Accessories          : 46.87
+  Home&Kitchen                   : 45.30
+  Electronics                    : 44.40
+
+
+  INDICATOR SCORE AVERAGES
+  ----------------------------------------
+  margin_score              : 0.8594
+  demand_score              : 0.0360
+  competition_score         : 0.1205
+  rating_score              : 0.8178
+
+
+  CHARTS GENERATED (Module 4.2 — Scores)
+  ----------------------------------------
+  11_winning_score_distribution.png  — Histogram of all winning scores
+  12_top20_winning_products.png      — Top 20 products by score
+  13_avg_score_per_category.png      — Avg score per category
+  14_score_components_top15.png      — 4 indicator bars for top 15
+  15_margin_vs_winning_score.png     — Scatter: margin vs score
+
+
+======================================================================
+  END OF SCORE REPORT
+======================================================================
